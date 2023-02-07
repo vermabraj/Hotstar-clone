@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Movies</title>
+  </head>
+  <body>
+    <div>
+      Search Movies : <input type="text" id="movies" oninput="search()" />
+    </div>
+  </body>
+</html>
+<script>
+  async function search() {
+    try {
+      let query = document.getElementById("movies").value;
+      //   console.log(query);
+      let res = await fetch(
+        `https://www.omdbapi.com/?i=tt3896198&apikey=e06dca83&s=${query}`
+      );
+      let data = await res.json();
+      // searchMovies(data.Search);
+      console.log(data.Search);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+</script>

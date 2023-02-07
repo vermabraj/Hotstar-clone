@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Hotstar</title>
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <!-- Slide Show-->
+    <div id="corosoul"></div>
+    <div id="filt-search">
+      <!-- filter button -->
+      <div id="filters">
+        <button onclick="LH()">Low to High</button>
+        <button onclick="HL()">High to Low</button>
+        <button onclick="rank()">Short by Rank</button>
+      </div>
+      <!-- Search bar -->
+    </div>
+
+    <!--  -->
+
+    <div id="container2">
+      <h2 style="margin-left: 80px">Top trending Movies</h2>
+      <!-- <div id="trend">
+        <h1>Trending Movies</h1>
+      </div> -->
+      <div id="movieData">
+        <img
+          id="loader"
+          src="https://c.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif"
+          alt="loader"
+        />
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module" src="./scripts/index.js"></script>
